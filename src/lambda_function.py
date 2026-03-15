@@ -27,7 +27,6 @@ def lambda_handler(event, context):
         MaxFaces=1,
         CollectionId="facial-recognition-app"
     )
-    print(response)
     status_code = response["ResponseMetadata"]["HTTPStatusCode"]
     if status_code != 200:
         raise ValueError(f"Something went wrong whilst creating a face print for {image_key}"
